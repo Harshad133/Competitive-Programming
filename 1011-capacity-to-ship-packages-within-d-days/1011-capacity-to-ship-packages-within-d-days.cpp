@@ -17,7 +17,6 @@ public:
             for(auto i : weights){
                 sum += i;
                 if(sum > mid){
-                    sum -= i;
                     d++;
                     sum = i;
                 }
