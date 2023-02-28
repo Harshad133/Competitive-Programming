@@ -1,11 +1,11 @@
 class Solution {
 public:
     int minDays(vector<int>& bloomDay, int m, int k) {
-        int high = *max_element(bloomDay.begin(),bloomDay.end());
-        int low = *min_element(bloomDay.begin(),bloomDay.end());
-
-        int  ans = INT_MAX;
-        cout<<low<<" "<<high;
+        double total = (double)m * (double)k, n = bloomDay.size();
+        if(total > n) return -1;
+        
+        int high = 1e9;
+        int low = 1;
 
         while(low <= high){ 
             int mid = (low+high) >> 1;
@@ -16,27 +16,22 @@ public:
                     count = 0;
                 else{
                     count++;
+                    if(count == k){
+                        count = 0;
+                        gcount++;
+                    }
                 }
-                if(count == k){
-                    count = 0;
-                    gcount++;
-                }
-                if(gcount == m)
-                    break;
             }
 
-            if(gcount == m){
-                if(mid < ans)
-                    ans = mid;
-                high = mid-1;
-            }
-            else
+            if(gcount < m)
                 low = mid + 1;
+            else
+                high = mid-1;
         }
 
-        if(ans == INT_MAX)
-            return -1;
+        // if(ans == INT_MAX)
+        //     return -1;
 
-        return ans;
+        return low;
     }
 };
