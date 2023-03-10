@@ -1,6 +1,8 @@
 class Solution {
 public:
     void subsets(int i,vector<int> nums,vector<int> com,vector<vector<int>> &res){
+        res.push_back(com);
+      
         for(int j = i ; j < nums.size() ; j++){
             if(j > i && nums[j]==nums[j-1]) continue;
 
@@ -9,7 +11,6 @@ public:
             com.pop_back();
         }
 
-        res.push_back(com);
     }
 
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
