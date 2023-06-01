@@ -40,7 +40,7 @@ struct Node
         data = x;
         next = NULL;
     }
-
+}
 */
 class Solution
 {
