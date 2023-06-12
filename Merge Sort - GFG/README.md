@@ -29,5 +29,5 @@ You don't need to take the input or print anything. Your task is to complete the
 <p><br>
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= N &lt;= 10<sup>5</sup><br>
-1 &lt;= arr[i] &lt;= 10<sup>3</sup></span></p>
+1 &lt;= arr[i] &lt;= 10</span><sup><span style="font-size:15px">5</span></sup></p>
 </div>
