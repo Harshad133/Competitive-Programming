@@ -30,7 +30,7 @@ class GFG {
 // User function Template for Java
 
 class Solution {
-    static boolean lemonadeChange(int N, int bills[]) {
+      static boolean lemonadeChange(int N, int bills[]) {
         int[] value = new int[3];
 
         for(int i = 0 ; i < bills.length ; i++){
