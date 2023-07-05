@@ -11,25 +11,61 @@ class Solution
 {
     public:
     //Function to find if there is a celebrity in the party or not.
+    bool knows(vector<vector<int> >& m,int a, int b)
+{
+    return m[a][b];
+}
+    
     int celebrity(vector<vector<int> >& m, int n) 
     {
-        int i =0;
-        for(int j = 0 ; j < n ; j++){
-            if(m[0][j] == 1 || j == 0){
-                for(i = 0 ; i < n ; i++)
-                    if(m[i][j] == 0 && i != j)
-                        break;
-                if(i == n){
-                    for(i = 0 ; i < n ; i++)
-                        if(m[j][i] == 1)
-                            break;
-                    if(i == n)
-                        return j;
-                }
-            }
+        stack<int> s;
+
+    // Celebrity
+    int C; 
+
+    // Push everybody to stack
+    for (int i = 0; i < n; i++)
+        s.push(i);
+
+    // Extract top 2
+ 
+
+    // Find a potential celebrity
+    while (s.size() > 1)
+    {   
+        int A = s.top();
+        s.pop();
+        int B = s.top();
+        s.pop();
+        if (knows(m,A, B))
+        {
+          s.push(B);
         }
-        
-        return -1;
+        else
+        {
+          s.push(A);
+        }
+    }
+     
+  
+    // Potential candidate?
+    C = s.top();
+    s.pop();
+
+    // Check if C is actually
+    // a celebrity or not
+    for (int i = 0; i < n; i++)
+    {
+        // If any person doesn't 
+        // know 'C' or 'C' doesn't 
+        // know any person, return -1
+        if ( (i != C) &&
+                (knows(m,C, i) || 
+                 !knows(m,i, C)) )
+            return -1;
+    }
+
+    return C;
     }
 };
 
