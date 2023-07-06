@@ -6,18 +6,29 @@ using namespace std;
 class Solution{
     public:
     //Complete this function
+    void permutaion(int index , string nums, vector<string> &res){
+    if(index == nums.size()-1){
+      res.push_back(nums);
+      return;
+    }
     
-    vector<string> permutation(string nums)
+    for(int i = index ; i < nums.size() ; i++){
+      swap(nums[index],nums[i]);
+      permutaion(index+1,nums,res);
+      swap(nums[i],nums[index]);
+    }
+      
+  }
+  
+    
+    vector<string> permutation(string S)
     {
         vector<string> res;
-        sort(nums.begin(),nums.end());
-        res.push_back(nums);
-
-        while(next_permutation(nums.begin(),nums.end())){
-            res.push_back(nums);
-        }
-
-        return res;
+        // vector<bool> freq(nums.size(),false);
+       // permution(nums,{},res,freq);
+        permutaion(0,S,res);
+        sort(res.begin(),res.end());
+       return res;
     }
 };
 
