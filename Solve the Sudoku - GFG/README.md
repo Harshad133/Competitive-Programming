@@ -1,8 +1,17 @@
 # Solve the Sudoku
 ## Hard
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an&nbsp;incomplete Sudoku&nbsp;configuration in terms of a 9 x 9 &nbsp;2-D square matrix (grid[][]), the task to find a solved Sudoku. For simplicity, you may assume&nbsp;that there will be only one unique solution.<br>
-<br>
-<strong>Sample Sudoku for you to get the logic for its solution:</strong><br>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an&nbsp;incomplete <a href="https://en.wikipedia.org/wiki/Sudoku"><strong>Sudoku&nbsp;</strong></a>configuration in terms of a 9 x 9 &nbsp;2-D square matrix (grid[][]), the task to find a solved Sudoku. For simplicity, you may assume&nbsp;that there will be only one unique solution.</span></p>
+
+<p><span style="font-size:18px">A sudoku solution must satisfy&nbsp;<strong>all of the following rules</strong>:</span></p>
+
+<ol>
+	<li><span style="font-size:18px">Each of the digits&nbsp;<code>1-9</code>&nbsp;must occur exactly once in each row.</span></li>
+	<li><span style="font-size:18px">Each of the digits&nbsp;<code>1-9</code>&nbsp;must occur exactly once in each column.</span></li>
+	<li><span style="font-size:18px">Each of the digits&nbsp;<code>1-9</code>&nbsp;must occur exactly once in each of the 9&nbsp;<code>3x3</code>&nbsp;sub-boxes of the grid.</span></li>
+</ol>
+
+<p><br>
+<span style="font-size:18px"><strong>Sample Sudoku for you to get the logic for its solution:</strong><br>
 <br>
 <img alt="" src="https://contribute.geeksforgeeks.org/wp-content/uploads/sudoku.png" style="height:247px; width:286px"></span></p>
 
