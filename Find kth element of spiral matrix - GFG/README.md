@@ -8,9 +8,9 @@ A[][] = {{1  2  3  4},
 &nbsp;        {5  6  7  8},
 &nbsp;        {9  10 11 12},<br>         {13 14 15 16}}
 <strong>Output:
-</strong>14<strong>
+</strong>13<strong>
 Explanation:<br></strong><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/700274/Web/Other/blobid0_1687070632.png" alt="">
-The spiral order of matrix will look like 1-&gt;2-&gt;3-&gt;4-&gt;8-&gt;12-&gt;16-&gt;15-&gt;14-&gt;13-&gt;9-&gt;5-&gt;6-&gt;7-&gt;11-&gt;10. So the 10th element in this order is 14. </span></pre>
+The spiral order of matrix will look like 1-&gt;2-&gt;3-&gt;4-&gt;8-&gt;12-&gt;16-&gt;15-&gt;14-&gt;13-&gt;9-&gt;5-&gt;6-&gt;7-&gt;11-&gt;10. So the 10th element in this order is 13. </span></pre>
 <p><span style="font-size: 18px;"><strong>Example 2</strong></span><span style="font-size: 18px;"><strong>:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input:
 </strong>n = 3, m = 3, k = 4
