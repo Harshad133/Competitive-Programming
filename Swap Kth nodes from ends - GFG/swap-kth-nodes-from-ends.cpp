@@ -31,7 +31,19 @@ bool check(Node ** before, Node **after, int num, int K)
 {
     if(K > num)
         return 1;
-    return (before[K-1] == after[num - K]) && (before[num-K] == after[K-1]);
+        
+    bool f=true;
+    
+    for(int i=0; i<num; i++){
+        if((i==K-1) || (i==num - K)){
+            if(!((before[K-1] == after[num - K]) && (before[num-K] == after[K-1]))) f=0;
+        }
+        else{
+            if(before[i] != after[i]) f=0;
+        }
+    }
+    
+    return f;
 }
 
 int main()
@@ -67,6 +79,8 @@ int main()
 }
 
 // } Driver Code Ends
+
+
 
 
 //User function Template for C++
