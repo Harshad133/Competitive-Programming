@@ -22,6 +22,7 @@ class Solution
 
 
 
+
 //{ Driver Code Starts.
 int main(){
     int t;
@@ -32,6 +33,7 @@ int main(){
 	    cin >> S;
 	    Solution ob;
 	    vector<string> ans = ob.find_permutation(S);
+	    sort(ans.begin(),ans.end());
 	    for(auto i: ans)
 	    {
 	    	cout<<i<<" ";
