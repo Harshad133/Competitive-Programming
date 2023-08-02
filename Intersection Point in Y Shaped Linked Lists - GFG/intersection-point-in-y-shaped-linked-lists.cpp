@@ -51,21 +51,19 @@ struct Node {
 class Solution
 {
 public:
-    int intersectPoint(Node* headA, Node* headB)
+    int intersectPoint(Node* head1, Node* head2)
     {
-        if(headA == NULL || headB == NULL)
-            return NULL;
+        Node *d1 = head1 , *d2 = head2;
         
-        Node *a = headA , *b = headB;
-
-        while(a != b){
-            a = a== NULL ? headB : a->next;
-            b = b== NULL ? headA : b->next;
+        while(d1 !=d2){
+            d1 = d1->next == NULL ? head2 : d1->next;
+            d2 = d2->next == NULL ? head1 : d2->next;
         }
-
-        return a->data;
+        
+        return d1->data;
     }
 };
+
 
 
 
