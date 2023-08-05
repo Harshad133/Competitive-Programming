@@ -21,6 +21,7 @@ public:
             St.push(y);
         }
     }
+    
     void fun(stack<int> &St){
         if(St.size()>0){
             int x=St.top();
@@ -29,6 +30,7 @@ public:
             insert_at_bottom(St,x);
         }
     }
+    
     void Reverse(stack<int> &St){
         fun(St);
     }
