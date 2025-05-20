@@ -3,21 +3,39 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        r = len(matrix)
-        c = len(matrix[0])
-        row = set()
-        col = set()
+        len_row = len(matrix)
+        len_col = len(matrix[0])
+        frow = 1
+        fcol = 1
 
-        for i in range(r):
-            for j in range(c):
+        for i in range(len_row):
+            for j in range(len_col):
                 if matrix[i][j] == 0:
-                    row.add(i)
-                    col.add(j)
+                    if i == 0 or j == 0:
+                        if i == 0:
+                            frow = 0
+                        if j == 0:
+                            fcol = 0
+                    else:
+                        matrix[i][0] = 0
+                        matrix[0][j] = 0
+        print(matrix)
+        # make zero marked row
+        for i in range(1,len_row):
+            if matrix[i][0] == 0:
+                for j in range(len_col):
+                    matrix[i][j] = 0
         
-        for i in row:
-            for x in range(c):
-                matrix[i][x] = 0
+        # make marked col zero
+        for j in range(1, len_col):
+            if matrix[0][j] == 0:
+                for i in range(len_row):
+                    matrix[i][j] = 0
+        
+        if frow == 0:
+            for j in range(len_col):
+                matrix[0][j] = 0
 
-        for j in col:
-            for x in range(r):
-                matrix[x][j] = 0
+        if fcol == 0:
+            for i in range(len_row):
+                matrix[i][0] = 0
