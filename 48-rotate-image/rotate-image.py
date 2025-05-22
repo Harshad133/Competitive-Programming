@@ -12,5 +12,5 @@ class Solution:
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
         
         for i in range(row):
-            # for j in range(int(col/2)):
             matrix[i] = matrix[i][::-1]
+
