@@ -15,7 +15,7 @@ class Solution:
                 else:
                     low = mid + 1
             else:
-                if nums[mid] >= nums[high] or nums[high] >= target:
+                if nums[mid] > nums[high] or nums[high] >= target:
                     low = mid + 1
                 else:
                     high = mid - 1
