@@ -7,6 +7,9 @@ class Solution:
         while low <= high:
             mid = (low + high) // 2
 
+            if nums[low] <= nums[high]:
+                return nums[low]
+
             if (mid > 0 and nums[mid] < nums[mid-1]) or (mid == 0 and nums[mid] <= nums[-1]):
                 return nums[mid]
             elif nums[mid] > nums[high]:
