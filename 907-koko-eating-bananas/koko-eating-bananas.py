@@ -19,7 +19,6 @@ class Solution:
             mid = (low + high) // 2
 
             est_h = self.eating_hour(piles, mid)
-            print(mid , " ", est_h)
 
             if est_h <= h:
                 high = mid - 1
